@@ -1,6 +1,6 @@
 {
   "name": "currencyxchange",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A light weight library for currency locale and exchange rates. Currency x-change module use auto caching of exchange rates.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -39,10 +39,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geekfarmer/currencyxchange.git"
+    "url": "git+https://github.com/roomiapp/currencyxchange.git"
   },
   "bugs": {
-    "url": "https://github.com/geekfarmer/currencyxchange/issues"
+    "url": "https://github.com/roomiapp/currencyxchange/issues"
   },
-  "homepage": "https://github.com/geekfarmer/currencyxchange#readme"
+  "homepage": "https://github.com/roomiapp/currencyxchange#readme"
 }
