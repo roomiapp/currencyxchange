@@ -10,7 +10,7 @@ export function formatCurrency(data: ConversionType): string {
     rates = {},
   } = data;
   let { from = 'USD', to = 'USD' } = data
-  if (country) to = currencies[country]
+  if (country) to = currencies[country] || 'USD'
   from = from.toUpperCase()
   to = to.toUpperCase()
   if (
