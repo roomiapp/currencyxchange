@@ -1,4 +1,4 @@
-export const formattedPrice = (currency: string, amount: number): string => {
+export const formattedPrice = (currency: string, amount: string): string => {
   switch (currency) {
     case "INR":
       return `₹${amount}`;

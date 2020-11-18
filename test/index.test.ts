@@ -1,4 +1,4 @@
-import { formatCurrency, getCurrencyRateList, getCurrencyRate } from "../src/index";
+import { formatCurrency } from "../src/index";
 
 const mockRates = {
   CAD: 1.3148195546,
@@ -38,12 +38,12 @@ const mockRates = {
 
 test("#on succesful conversion", async () => {
   const formattedPrice: string = formatCurrency({
-    amount: 0,
+    amount: 1500,
     from: "USD",
     country: "IN",
     rates: mockRates,
   });
-  expect(formattedPrice).toEqual("₹0");
+  expect(formattedPrice).toEqual("₹111,589");
 });
 
 test("#on no conversion found", async () => {

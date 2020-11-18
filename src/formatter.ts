@@ -4,7 +4,7 @@ import { currencies } from './data/currencies';
 
 export function formatCurrency(data: ConversionType): string {
   const {
-    amount,
+    amount = 0 ,
     country,
     maximumFractionDigits = 0,
     rates = {},
@@ -17,17 +17,19 @@ export function formatCurrency(data: ConversionType): string {
     !supportedCurrencies.includes(from) ||
     !supportedCurrencies.includes(to)
   ) {
-    return formattedPrice(from, amount)
+    return formattedPrice(from, amount + '')
   }
   if (from === to) {
-    return formattedPrice(from, amount)
+    return formattedPrice(from, amount + '')
   }
   if (rates && rates[to]) {
     const convertedAmount = new Intl.NumberFormat("en-US", {
       style: "decimal",
       maximumFractionDigits,
     }).format(amount * rates[to]);
-    return formattedPrice(to, parseInt(convertedAmount));
+    console.log(convertedAmount);
+    
+    return formattedPrice(to, convertedAmount);
   }
-  return formattedPrice(from, amount);
+  return formattedPrice(from, amount + '');
 }

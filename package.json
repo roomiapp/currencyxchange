@@ -1,6 +1,6 @@
 {
   "name": "currencyxchange",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "description": "A light weight library for currency locale and exchange rates. Currency x-change module use auto caching of exchange rates.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
