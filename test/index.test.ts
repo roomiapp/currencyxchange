@@ -1,4 +1,4 @@
-import { formatCurrency } from "../src/index";
+import { formatCurrency, getCurrencyRateList } from "../src/index";
 
 const mockRates = {
   CAD: 1.3148195546,
@@ -37,6 +37,9 @@ const mockRates = {
 };
 
 test("#on succesful conversion", async () => {
+  const rates = await getCurrencyRateList('aa8e791860bb2e1e9ff9cafe8ac96c05');
+  console.log(rates);
+  
   const formattedPrice: string = formatCurrency({
     amount: 1500,
     from: "USD",

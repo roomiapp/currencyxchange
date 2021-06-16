@@ -7,9 +7,9 @@ export class Currency extends ApiClient {
     super(API);
   }
 
-  public getConversion = async (base: string) => {
+  public getConversion = async (base: string, apiKey: string) => {
     try {
-      return this.instance.get<ResponseData>(`${LATEST}?base=${base}`);
+      return this.instance.get<ResponseData>(`${LATEST}?access_key=${apiKey}&base=${base}`);
     } catch (error) {
       console.log(error.message);
       return undefined;
